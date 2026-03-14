@@ -3,17 +3,13 @@
 from __future__ import annotations
 
 import importlib
+import pathlib
 import sys
 import types
 import unittest
 from unittest.mock import AsyncMock, MagicMock, patch
 
-# ---------------------------------------------------------------------------
 # Ensure the project root is on sys.path so we can import project modules.
-# ---------------------------------------------------------------------------
-import pathlib
-import sys
-
 sys.path.insert(0, str(pathlib.Path(__file__).parent.parent))
 
 from plugins.base import Plugin, PluginResult

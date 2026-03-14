@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import os
+import pathlib
 from typing import Optional
 
 from dotenv import load_dotenv
@@ -46,6 +47,4 @@ COPILOT_MODEL: str = _get("COPILOT_MODEL", "gpt-4o")
 LOG_LEVEL: str = _get("LOG_LEVEL", "INFO").upper()
 
 # ── Project root (needed by code-editor plugin) ───────────────────────────────
-import pathlib  # noqa: E402
-
 PROJECT_ROOT: pathlib.Path = pathlib.Path(__file__).parent.resolve()
